@@ -49,7 +49,7 @@
         endpoint : https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod/add-member?id=5&real_name=test1&tz=asia
         
         Here , we are creating a user in the "members" table ,i.e,
-        id = 5, real_name = test1, tz = asia , as per the aarguments passed along with the URL and <h4>"/add-member"</h4>,
+        id = 5, real_name = test1, tz = asia , as per the aarguments passed along with the URL and "/add-member",
         
     2. for a member you can add multiple activites - 
 
@@ -58,7 +58,7 @@
         Here , for id = 5
         we are inserting its activity , start_time = aug12 and end_time = aug14 ,
         this data is being inserted into "members_activity_periods" table , 
-        here , along with the URL , <h4>"/add-member-activity"</h4> this is the endpoint for activites
+        here , along with the URL , "/add-member-activity" this is the endpoint for activites
         assuming that the id already exists , if not , then create the id using the first API .
 
     3. view user details using its "id" - 
@@ -66,7 +66,14 @@
         endpoint : https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod/get-users?id=4
         
         id = 4 is the arguement , which is being queried to fetch the details related to that particular user
-        Here , <h4>"/get-users"</h4> is the endpoint
+        Here , "/get-users" is the endpoint
+        
 
+To Summarise :
+
+endpoints :
+    Base url + /add-member ,(args = id , real_name, tz),
+    base url + /add-member-activity ,(args = id, start_time, end_time),
+    base url + /get-users ,(args = id)
 
 
