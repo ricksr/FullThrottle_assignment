@@ -1,43 +1,48 @@
 # FullThrottle_assignment
 
-Function endpoint : 
+<b>Function endpoint :</b> 
     https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod
     
-Database : 
+<b>Database :</b> 
     https://full-throttle-sutirth.herokuapp.com/v1/graphql
     
-Db pswd : 
+<b>Db pswd :</b> 
     test
 
-Db design idea :
+<h3>Db design idea :</h3>
 
-    there can be two tables :-
+    #there can be two tables :-
 
     1. Members  ( this contains info specific to a user )
+        Link :
+            https://full-throttle-sutirth.herokuapp.com/console/data/schema/public/tables/members/browse
+            
     2. Members Activity ( 
-        this table contains MANY activities of any particular user, 
+        this table contains multiple activities of any particular user, 
         "id" of the previous table is the foreign key here named as "member_id" )
+        Link:
+            https://full-throttle-sutirth.herokuapp.com/console/data/schema/public/tables/members_activity_periods/browse
 
-    Why this should work ?
+    #Why this should work ?
 
-    we want to create multiple activities for a particular user , 
-    so its better to use another table , for storing activities , as per our use case , 
-    this design fullfils the reuirement , 
+        we want to create multiple activities for a particular user , 
+        so its better to use another table , for storing activities , as per our use case , 
+        this design fullfils the reuirement , 
     
-    why not single table ?
+    #why not single table ?
 
-    if we wish to update "member" related info. not "member activity" , 
-    then in a single table , we will end up traversing many rows  increasing overall complexity , 
-    solution is to make two different tables , each fullfilling a particular use case .
+        if we wish to update "member" related info. not "member activity" , 
+        then in a single table , we will end up traversing many rows  increasing overall complexity , 
+        solution is to make two different tables , each fullfilling a particular use case .
 
-    What is the relation between both the table ?
+    #What is the relation between both the table ?
 
-    They are associated with a common id ( which is acting as a Foreign key )
-    "id" of "member" table ----->  "member_id" of "member_activity_periods" table
-    This is one to many relationship .
+        They are associated with a common id ( which is acting as a Foreign key )
+        "id" of "member" table ----->  "member_id" of "member_activity_periods" table
+        This is one to many relationship .
     
 
-API design :
+<h3>API design :</h3>
 
     1. one can create a member and add details to it -
 
