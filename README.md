@@ -72,8 +72,11 @@
 To Summarise :
 
 endpoints :
-    Base url + /add-member ,(args = id , real_name, tz),
-    base url + /add-member-activity ,(args = id, start_time, end_time),
-    base url + /get-users ,(args = id)
+
+Base url + /add-member ,(args = id , real_name, tz),
+
+base url + /add-member-activity ,(args = id, start_time, end_time),
+
+base url + /get-users ,(args = id)
 
 
