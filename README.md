@@ -2,8 +2,10 @@
 
 Function endpoint : 
     https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod
+    
 Database : 
     https://full-throttle-sutirth.herokuapp.com/v1/graphql
+    
 Db pswd : 
     test
 
