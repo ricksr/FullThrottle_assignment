@@ -64,7 +64,7 @@
 
         endpoint : https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod/get-users?id=4
         
-        id = 4 is the arguement , which ie being queried to fetch the details related to that particular user
+        id = 4 is the arguement , which is being queried to fetch the details related to that particular user
 
 
 
