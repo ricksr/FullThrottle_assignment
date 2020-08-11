@@ -14,15 +14,21 @@ Db design idea :
     there can be two tables :-
 
     1. Members  ( this contains info specific to a user )
-    2. Members Activity ( this table contains MANY activities of any particular user, "id" of the previous table is the foreign key here named as "member_id" )
+    2. Members Activity ( 
+        this table contains MANY activities of any particular user, 
+        "id" of the previous table is the foreign key here named as "member_id" )
 
     Why this should work ?
 
-    we want to create multiple activities for a particular user , so its better to use another table , for storing activities , as per our use case , this design fullfils the reuirement , 
+    we want to create multiple activities for a particular user , 
+    so its better to use another table , for storing activities , as per our use case , 
+    this design fullfils the reuirement , 
     
     why not single table ?
 
-    if we wish to update "member" related info. not "member activity" , then in a single table , we will end up traversing many rows  increasing overall complexity , solution is to make two different tables , each fullfilling a particular use case .
+    if we wish to update "member" related info. not "member activity" , 
+    then in a single table , we will end up traversing many rows  increasing overall complexity , 
+    solution is to make two different tables , each fullfilling a particular use case .
 
     What is the relation between both the table ?
 
@@ -46,7 +52,8 @@ API design :
 
         Here , for id = 5
         we are inserting its activity , start_time = aug12 and end_time = aug14 ,
-        this data is being inserted into "members_activity_periods" table , assuming that the id already exists , if not , then create the id using the first API .
+        this data is being inserted into "members_activity_periods" table , 
+        assuming that the id already exists , if not , then create the id using the first API .
 
     3. view user details using its "id" - 
 
