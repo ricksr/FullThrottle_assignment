@@ -4,7 +4,7 @@
     https://mt19cnvqh4.execute-api.us-east-1.amazonaws.com/prod
     
 <b>Database :</b> 
-    https://full-throttle-sutirth.herokuapp.com/v1/graphql
+    https://full-throttle-sutirth.herokuapp.com/
     
 <b>Db pswd :</b> 
     test
